@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+.page {
+    width: 360px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#new-game {
+    margin-bottom: 10px;
+}
+
+table {
+    display: inline-table;
+}
+
+.cell {
+    position: relative;
+    border: 2px solid;
+    font-size: 60px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cell-striked::after {
+    display: block;
+    position: absolute;
+    top: 48px;
+    border: 1px solid black;
+    content: "";
+}
+
+.cell.hor-striked::after {
+    left: -2px;
+    width: 102px;
+}
+
+.cell.ver-striked::after {
+    left: -2px;
+    width: 102px;
+    transform: rotate(90deg);
+}
+
+.cell.diag-lr-striked::after {
+    left: -20px;
+    width: 139px;
+    transform: rotate(45deg);
+}
+
+.cell.diag-rl-striked::after {
+    left: -20px;
+    width: 139px;
+    transform: rotate(135deg);
+}
